@@ -1,5 +1,5 @@
 fun main (){
-    val timeOfAbsence: Int = 1200
+    var timeOfAbsence: Int = 1200
     agoToText(timeOfAbsence)
 }
 
