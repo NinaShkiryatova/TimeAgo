@@ -5,12 +5,12 @@ fun main (){
 
 fun agoToText (timeOfAbsence: Int){
     when (true){
-        timeOfAbsence in 0..60 -> println("Пользователь был(а) в сети только что")
-        timeOfAbsence > 60 && timeOfAbsence <= 60*60 -> println("Пользователь был(а) в сети ${timeOfAbsence/60} ${minutesAgo(timeOfAbsence)} назад")
-        timeOfAbsence > 60*60 && timeOfAbsence <= 24*60*60 -> println("Пользователь был(а) в сети ${timeOfAbsence/60/60} ${hoursAgo(timeOfAbsence)} назад")
-        timeOfAbsence > 24*60*60 && timeOfAbsence <= 48*60*60 -> println("Пользователь был(а) в сети сегодня")
-        timeOfAbsence > 48*60*60 && timeOfAbsence <= 72*60*60 -> println("Пользователь был(а) в сети вчера")
         timeOfAbsence > 72*60*60 -> println("Пользователь был(а) в сети давно")
+        timeOfAbsence > 48*60*60 -> println("Пользователь был(а) в сети вчера")
+        timeOfAbsence > 24*60*60 -> println("Пользователь был(а) в сети сегодня")
+        timeOfAbsence > 60*60 -> println("Пользователь был(а) в сети ${timeOfAbsence/60/60} ${hoursAgo(timeOfAbsence)} назад")
+        timeOfAbsence > 60 -> println("Пользователь был(а) в сети ${timeOfAbsence/60} ${minutesAgo(timeOfAbsence)} назад")
+        else -> println("Пользователь был(а) в сети только что")
     }
 }
 
